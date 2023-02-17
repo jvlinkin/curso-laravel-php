@@ -16,4 +16,12 @@ class HomeController extends Controller
             'users' => $users
         ]);
     }
+
+    public function show($id){
+        $user = User::find($id);
+
+        return view('home.show', [
+            'user' => $user
+        ]);
+    }
 }

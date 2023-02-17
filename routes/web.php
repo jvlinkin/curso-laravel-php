@@ -14,5 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [HomeController::class, 'index']);
+Route::get('/users', [HomeController::class, 'index']);
+Route::get('/users/{id}', [HomeController::class, 'show']);
 
